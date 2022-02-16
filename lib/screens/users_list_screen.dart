@@ -48,6 +48,7 @@ class UsersListScreen extends StatefulWidget {
 class _UsersListScreenState extends State<UsersListScreen> {
   late Future<List<User>> futureUsersList;
   late List<User> usersListData;
+  bool isChecked = true;
 
   @override
   void initState() {
@@ -68,7 +69,14 @@ class _UsersListScreenState extends State<UsersListScreen> {
                 return Text('${snapshot.error}');
               }
 
-              return const CircularProgressIndicator();
+              return Checkbox(
+                  checkColor: Colors.red,
+                  value: isChecked,
+                  onChanged: (bool? value) {
+                    setState(() {
+                      isChecked = value!;
+                    });
+                  });
             })
     );
   }

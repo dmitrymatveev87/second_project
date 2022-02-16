@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 
 void main() => runApp(const SignUpApp());
 
@@ -23,7 +23,7 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[200],
+      backgroundColor: Colors.blueAccent[200],
       body: Center(
         child: SizedBox(
           width: 400,
